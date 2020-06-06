@@ -35,14 +35,14 @@
             <div class=" row ">
             <!-- Anything with a 12 in it goes all the way across the page -->
 				
-					{% for genre in genres %}
+					{% for radio in genre %}
                     <div class="col-md-6 text-center post-preview">
-					{% if genre.radio_genre == 'pop' or genre.radio_genre == 'pop' %}
+					{% if radio.radio_genre == 'classic-hits' or radio.radio_genre == '80s' %}
                     
 					<img src= "{{ radio.img }}" class="media-object col-md-6 height=100 width=100" >
-					<a href="{{url_for('get_radio_details', radio_genre=genre.radio_genre|lower)}}">
+					<a href="{{url_for('get_radio_details', radio_genre=radio.radio_genre|lower)}}">
 						<h3 class="post-title ">
-							{{genre.radio_genre}}
+							{{radio.radio_genre}}
 						</h3>
 					</a>
 
@@ -50,24 +50,6 @@
 					<hr>
 
 					<div class=" row ">
-            <!-- Anything with a 12 in it goes all the way across the page -->
-				
-					{% for genre in genres %}
-                    <div class="col-md-6 text-center post-preview">
-					{% if genre.radio_genre == 'classic-hits' or genre.radio_genre == 'classic-hits' %}
-                    
-					<img src= "{{ radio.img }}" class="media-object col-md-6 height=100 width=100" >
-					<a href="{{url_for('get_radio_details', radio_genre=genre.radio_genre|lower)}}">
-						<h3 class="post-title ">
-							{{genre.radio_genre}}
-						</h3>
-					</a>
-
-					{% endif %}
-					<hr>
-                    </div>
-					{% endfor %}
-				
             </div>
                     </div>
 					{% endfor %}
