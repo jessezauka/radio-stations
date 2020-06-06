@@ -1,0 +1,46 @@
+{% extends 'base.html' %} {% block content %}
+
+<h3> Add Radio Station </h3>
+<form class="form-group" action="{{ url_for('insert_station') }}" method="POST" name="station">
+	<div class="container">
+		<div class="row">
+			<div class="form-group container col-md-12">
+
+				<select class="form-control" id="radio_genre" name="radio_genre">
+                   {% for radio in genre %}
+                        <option >{{ radio.radio_genre }}</option>
+                    {% endfor %}
+                </select>
+
+			</div>
+			<div class=" col-md-12">
+				<label for="exampleFormControlTextarea1">Name:</label>
+				<textarea class="form-control" id="radio_name" name="radio_name" type="text" value=""></textarea>
+			</div>
+			<div class=" col-md-12">
+				<label for="exampleFormControlTextarea1">URL:</label>
+				<textarea class="form-control" id="radio_website" name="radio_website" type="text" value=""></textarea>
+			</div>
+			<div class="col-md-12">
+				<label for="exampleFormControlTextarea1">Phone:</label>
+				<textarea class="form-control" id="radio_phone" name="radio_phone" type="text" value=""></textarea>
+			</div>
+			<div class="col-md-12">
+				<label for="exampleFormControlTextarea1">Description:</label>
+				<textarea class="form-control" id="radio_description" name="radio_description" type="text" value=""></textarea>
+			</div>
+			<div class="col-md-12">
+				<label for="exampleFormControlTextarea1">Stream URL:</label>
+				<textarea class="form-control" id="radio_stream" name="radio_stream" type="text" value=""></textarea>
+			</div>
+			<button class="row btn btn-primary col-md-4" type="submit">Add Radio Station
+                <i class="">send</i>
+            </button>
+
+		</div>
+	</div>
+</form>
+
+
+
+{% endblock %}

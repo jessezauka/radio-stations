@@ -1,0 +1,47 @@
+{% extends 'base.html' %} {% block content %}
+
+
+<h3> Edit Radio Station </h3>
+<!--Form to edit radio station-->
+<form action="{{ url_for('update_station', station_id=station._id) }}" method="POST" class="col-md-12">
+	<div class="container">
+		<div class="row">
+			<div class="form-group container-fluid col-md-12">
+
+				<select class="form-control" id="radio_genre" name="radio_genre">
+                    {% for genre in genres %}
+                        <option>{{ genre.radio_genre }}</option>
+                    {% endfor %}
+                </select>
+
+			</div>
+			<div class=" col-md-12">
+				<label for="exampleFormControlTextarea1">Name:</label>
+				<textarea class="form-control" id="radio_name" name="radio_name" type="text" value="">{{station.radio_name}}</textarea>
+			</div>
+			<div class=" col-md-12">
+				<label for="exampleFormControlTextarea1">URL:</label>
+				<textarea class="form-control" id="radio_website" name="radio_website" type="text" value="">{{station.radio_website}}</textarea>
+			</div>
+			<div class="col-md-12">
+				<label for="exampleFormControlTextarea1">Phone:</label>
+				<textarea class="form-control" id="radio_phone" name="radio_phone" type="text" value="">{{station.radio_phone}}</textarea>
+			</div>
+			<div class="col-md-12">
+				<label for="exampleFormControlTextarea1">Description:</label>
+				<textarea class="form-control" id="radio_description" name="radio_description" type="text" value="">{{station.radio_description}}</textarea>
+			</div>
+			<div class="col-md-12">
+				<label for="exampleFormControlTextarea1">Stream URL:</label>
+				<textarea class="form-control" id="radio_stream" name="radio_stream" type="text" value="">{{station.radio_stream}}</textarea>
+			</div>
+			<button class="btn btn-primary col-md-4" type="submit">Update Station
+                <i class="">send</i>
+            </button>
+
+		</div>
+	</div>
+</form>
+
+
+{% endblock %}

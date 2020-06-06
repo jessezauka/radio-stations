@@ -1,0 +1,70 @@
+{% extends 'base.html' %} {% block content %}
+ 
+<div class="container-fluid col-md-12">
+	<div class="row">
+		<div class="col-lg-8 col-md-6 col-sm-12 mx-auto">
+			<div class="post-preview ">
+				<h2 class="post-title">
+					{{ title }}
+				</h2>
+			</div>
+			<hr>
+			<div class="col-lg-8 col-md-12 mx-auto">
+
+			<!-- for loop to find list radio stations -->
+
+			{% for radio in station %}
+			<div class="post-preview ">
+				<a href="{{url_for('get_station')}}">
+					<h3 class="post-title">
+						{{ radio.radio_name }}
+					</h3>
+				</a>
+
+				<p class="">
+                <span>Website:</span>
+                   {{ radio.radio_website }}
+                </p>
+                <p>
+                <span>Phone:</span>
+                  {{ radio.radio_phone }}
+                </p>
+                <p>
+                    <span>Radio Description:</span>
+                    <ul>
+                    <!--Nested loop to display in a list-->
+                    
+                            <li>{{ radio.radio_description }}</li>
+                        
+                    </ul>
+                </p>
+                <p>
+                    <span>Live Stream:</span><br />
+
+                   <!--Audio player code--> 
+
+<audio controls>
+  <source src="{{ radio.radio_stream }}" type="audio/mpeg">
+  <source src="{{ radio.radio_stream }}" type="audio/ogg">
+</audio>
+                                                                              
+                        
+				</p>
+
+			</div>
+            <!--buttons for delete and add station-->
+            <div class="clearfix row  ">
+              <div class="col-md-6">
+				<a class="btn btn-primary " href="{{url_for('delete_station', station_id=radio._id)}}">Delete radio station </a>
+              </div>
+              <div class="col-md-6">
+                <a class="btn btn-primary" href="{{url_for('edit_station', station_id=radio._id)}}">Edit radio station </a>
+              </div>
+			</div>
+            {% endfor %}
+			<hr>
+			
+		</div>
+	</div>
+</div>
+{% endblock %}
