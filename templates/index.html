@@ -17,7 +17,7 @@
 
 					{% for radio in genre %}
                     <div class="col-md-6 text-center post-preview">
-					{% if radio.radio_genre == 'news' or radio.radio_genre == 'pop' %}
+					{% if radio.radio_genre == 'news' or radio.radio_genre == 'pop'%}
                     
 					<img src= "{{ radio.img }}" class="media-object col-md-6 height=100 width=100" >
 					<a href="{{url_for('get_radio_details', radio_genre=radio.radio_genre|lower)}}">

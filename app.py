@@ -46,7 +46,7 @@ def insert_station():
 @app.route('/edit_station/<station_id>')
 def edit_station(station_id):
     the_station = mongo.db.station.find_one({"_id": ObjectId(station_id)})
-    all_genres = mongo.db.station.find()
+    all_genres = mongo.db.genre.find()
     return render_template('edit_station.html', station=the_station,
                            genres=all_genres)
 
