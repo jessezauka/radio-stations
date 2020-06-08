@@ -22,7 +22,7 @@
 
 					<a href="{{url_for('get_radio_details', radio_genre=radio.radio_genre|lower)}}">
 						<h3 class="post-title ">
-							{{radio.radio_genre}}
+							{{radio.radio_genre.title()}}
 						</h3>
 					</a>
 

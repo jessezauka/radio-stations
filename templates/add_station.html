@@ -8,7 +8,7 @@
 
 				<select class="form-control" id="radio_genre" name="radio_genre">
                    {% for radio in genre %}
-                        <option >{{ radio.radio_genre }}</option>
+                        <option >{{ radio.radio_genre.title() }}</option>
                     {% endfor %}
                 </select>
 			</div>
