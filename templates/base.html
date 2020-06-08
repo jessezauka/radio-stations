@@ -9,9 +9,20 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
 
+    <!-- EmailJS code -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("user_FInh0oB5WxljIgnvLfu9c");
+      emailjs.send("gmail", "contact_us",{name: "Ceslovas", notes: "The project that I want is ..."});
+   })();
+</script>
+
 <title>Radio Stations Ireland</title>
 </head>
 <body>
+
+
 <header>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <img src="../static/images/logo.png" height="70" alt="">
@@ -37,11 +48,13 @@
          <a class="nav-link" href="{{url_for('get_radio_details', radio_genre='80s')}}">80s</a>
         </div>
       </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{{url_for('contact_us')}}">Contact Us</a>
+          </li>
     </ul>
     </div>
   </nav>
 </header>
-
 
   <!-- Page Header -->
 

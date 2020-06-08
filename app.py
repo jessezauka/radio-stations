@@ -15,6 +15,9 @@ mongo = PyMongo(app)
 def get_station():
     return render_template("index.html", genre=list(mongo.db.genre.find()))
 
+@app.route('/contact-us')
+def contact_us():
+    return render_template("contact_us.html",)
 
 @app.route('/genre/<radio_genre>')
 def get_radio_details(radio_genre):
@@ -55,7 +58,7 @@ def edit_station(station_id):
 def update_station(station_id):
     station = mongo.db.station
     station.update({'_id': ObjectId(station_id)}, {
-        'radio_genre': request.form.get('radio_genre'),
+        'radio_genre': request.form.get('radio_genre').lower(),
         'radio_name': request.form.get('radio_name'),
         'radio_website': request.form.get('radio_website'),
         'radio_phone': request.form.get('radio_phone'),
