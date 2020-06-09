@@ -213,3 +213,9 @@ a .fa-download:hover {
 .social-links li a i:hover {
   background: #e67e22;
 }
+
+.audio-container {
+  display: flex;
+  justify-content: center;
+  align-items: center
+}

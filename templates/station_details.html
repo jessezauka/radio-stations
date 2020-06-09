@@ -23,7 +23,7 @@
 
 				<p class="">
                 <span>Website:</span>
-                    <a href="{{ radio.radio_website }}">{{ radio.radio_website }}</a>
+                    <a href="{{ ''.join(['http://', radio.radio_website]) }}">{{ radio.radio_website }}</a>
                 </p>
                 <p>
                 <span>Phone:</span>
@@ -42,12 +42,12 @@
                     <span>Live Stream:</span><br />
 
                    <!--Audio player code--> 
-
-<audio controls>
+<div class='audio-container'>
+ <audio controls>
   <source src="{{ radio.radio_stream }}" type="audio/mpeg">
   <source src="{{ radio.radio_stream }}" type="audio/ogg">
 </audio>
-                                                                              
+            </div>
                         
 				</p>
 
