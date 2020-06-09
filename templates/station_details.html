@@ -5,7 +5,7 @@
 		<div class="col-lg-8 col-md-6 col-sm-12 mx-auto">
 			<div class="post-preview ">
 				<h2 class="post-title">
-					{{ title }}
+					{{ title }} Radio Stations
 				</h2>
 			</div>
 			<hr>
@@ -15,11 +15,11 @@
 
 			{% for radio in station %}
 			<div class="post-preview ">
-				<a href="{{url_for('get_station')}}">
+
 					<h3 class="post-title">
 						{{ radio.radio_name }}
 					</h3>
-				</a>
+
 
 				<p class="">
                 <span>Website:</span>
@@ -30,13 +30,10 @@
                   {{ radio.radio_phone }}
                 </p>
                 <p>
-                    <span>Radio Description:</span>
-                    <ul>
                     <!--Nested loop to display in a list-->
                     
-                            <li>{{ radio.radio_description }}</li>
-                        
-                    </ul>
+                    {{ radio.radio_description }}
+
                 </p>
                 <p>
                     <span>Live Stream:</span><br />
@@ -66,5 +63,6 @@
 			
 		</div>
 	</div>
+</div>
 </div>
 {% endblock %}

@@ -23,7 +23,7 @@ def contact_us():
 def get_radio_details(radio_genre):
     title = ''
     if radio_genre == 'news':
-        title = 'Irish News Radio'
+        title = 'News'
     elif radio_genre == 'pop':
         title = 'Pop'
     elif radio_genre == 'classic-hits':
