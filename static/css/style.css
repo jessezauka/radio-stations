@@ -81,12 +81,93 @@ button[type="submit"] {
   margin: 10px 10px;
 }
 
-footer {
-  background-color: #676767;
-  color: #fffff0;
-  min-height: 120px;
-  padding-bottom: 15px;
-  padding-top: 15px;
+.inner-content {
+    width: 100%;
+    padding: 0 2.5rem;
+    max-width: 1200px;
+    margin: 0 auto
+}
+
+@media (max-width: 959px) {
+    .inner-content {
+        padding: 0 2rem
+    }
+}
+
+@media (max-width: 419px) {
+    .inner-content {
+        padding: 0 1.5rem
+    }
+}
+
+.footer-link {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    outline: none
+}
+
+.footer-link:focus, .footer-link:hover {
+    border-bottom: 1px solid #fca253
+}
+
+.footer-link .icon.outbound {
+    display: none
+}
+
+.footer {
+    display: flex;
+    height: 9.5rem;
+    background-color: #444;
+    font-size: .75rem;
+    color: #999;
+    padding-top: 2rem;
+    padding-bottom: 2rem
+}
+
+.footer .footer-content {
+    text-align: center
+}
+
+.footer .footer-content.has-sidebar {
+    margin-left: 20rem
+}
+
+.footer .text-container {
+    padding: 1rem 0;
+    border-top: 1px solid #999;
+    border-bottom: 1px solid #999
+}
+
+.footer .footer-copyright {
+    margin-bottom: .5rem;
+    font-style: italic
+}
+
+.footer .footer-links {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    list-style-type: none
+}
+
+.footer .footer-links .footer-item {
+    margin: 0 5px;
+    padding: .4rem 1rem;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+@media (max-width: 959px) {
+    .footer .footer-content.has-sidebar {
+        margin-left: 18rem
+    }
+}
+
+@media (max-width: 719px) {
+    .footer .footer-content.has-sidebar {
+        margin-left: 0
+    }
 }
 
 a .fa-download {

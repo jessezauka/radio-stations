@@ -8,20 +8,17 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
-
-    <!-- EmailJS code -->
+<!-- EmailJS code -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
 <script type="text/javascript">
    (function(){
       emailjs.init("user_FInh0oB5WxljIgnvLfu9c");
-      emailjs.send("gmail", "contact_us",{name: "Ceslovas", notes: "The project that I want is ..."});
    })();
 </script>
 
 <title>Radio Stations Ireland</title>
 </head>
 <body>
-
 
 <header>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -74,37 +71,14 @@
 
 
   <!-- Footer -->
-  <footer class="container-fluid">
-        <div>
-            <div id="footer-details" class="row">
-                <div class="col-sm-4">
-                <h5 class="uppercase general-sub">About us</h5>
-                <p class="inline-block">
-                    Listen to Irish radio stations 24/7.
-                </p>
-                </div>
-                <div class="col-sm-4">
-                <h5 class="uppercase general-sub">Copyright</h5>
-                <p class="inline-block">
-                2018 - 2020</br>
-                Ceslovas Karzenauskas
-                </p>
-                </div>
-                <div class="col-sm-4">
-                <h5 class="uppercase general-sub">My Social</h5>
-                <ul class="list-inline social-links">
-                    <li><a target="_blank" href="https://www.facebook.com/"><i class=" fa fa-facebook"></i></a></li>
-                    <li><a target="_blank" href="https://twitter.com/explore"><i class=" fa fa-twitter"></i></a></li>
-                    <li><a target="_blank" href="https://www.linkedin.com/home"><i class=" fa fa-linkedin"></i></a></li>
-                </ul>
-                </div>
-            </div>
-        </div>
-    </footer>
+ <footer class="footer"><section class="inner-content footer-content"><div class="text-container"><div class="footer-copyright">Copyright © 2020 Ceslovas Karzenauskas, All rights reserved.</div> <div>Follow us on <a href="https://facebook.com/" target="_blank" rel="noopener noreferrer" class="footer-link external">Facebook</a> or <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" class="footer-link external">
+    Twitter
+    </a></div></div> </section></footer></section>
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="../static/js/sendEmail.js"></script>
 </body>
 
 </html>
