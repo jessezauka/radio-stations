@@ -1,7 +1,7 @@
 import os
 if os.path.exists("env.py"):
-  import env
-from flask import Flask, render_template, redirect, request, url_for, request
+    import env
+from flask import Flask, render_template, redirect, url_for, request
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 
@@ -31,7 +31,6 @@ def get_radio_details(radio_genre):
     elif radio_genre == '80s':
         title = '80s'
     station = mongo.db.station.find({"radio_genre": radio_genre})
-    print(station)
     return render_template('station_details.html', station=mongo.db.station.find({"radio_genre": radio_genre}), title=title)
 
 @app.route('/stations/add_station')
@@ -42,9 +41,22 @@ def add_station():
 @app.route('/insert_station', methods=['POST'])
 def insert_station():
     station = mongo.db.station
-    station.insert_one(request.form.to_dict())
+    station_id = station.insert_one(request.form.to_dict()).inserted_id
+    station.update({'_id': ObjectId(station_id)}, {
+        'radio_genre': request.form.to_dict()["radio_genre"].lower(),
+        'radio_name': request.form.get('radio_name'),
+        'radio_website': request.form.get('radio_website'),
+        'radio_phone': request.form.get('radio_phone'),
+        'radio_description': request.form.get('radio_description'),
+        'radio_stream': request.form.get('radio_stream')
+    })
+    station.update({'id': station_id},
+                   {
+                       '$set': {
+                           "radio_genre": "radio_genre"
+                       }
+                   })
     return redirect(url_for('get_station'))
-
 
 @app.route('/edit_station/<station_id>')
 def edit_station(station_id):
