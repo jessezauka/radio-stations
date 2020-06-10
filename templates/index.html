@@ -28,7 +28,7 @@
 					{% for radio in genre %}
                     <div class="col-md-6 text-center post-preview">
 					{% if radio.radio_genre == 'news' or radio.radio_genre == '80s' or radio.radio_genre == 'pop' or radio.radio_genre == 'classic-hits'%}
-                    <img src="{{ url_for('static', filename='../static/images/'+radio.radio_genre|replace(' + ', '-')|replace(' ', '-')|lower+'.png') }}" height="220" alt="Radio genre" lazyload="on">
+                    <img src="{{ url_for('static', filename='../static/images/'+radio.radio_genre|replace(' + ', '-')|replace(' ', '-')|lower+'.png') }}" height="220" alt="Radio genre">
 
 					<a href="{{url_for('get_radio_details', radio_genre=radio.radio_genre|lower)}}">
 						<h3 class="post-title ">

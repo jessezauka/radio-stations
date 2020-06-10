@@ -30,7 +30,7 @@ h1 {
 }
 
 h2,
-h3 {
+h3, h6 {
   font-size: 2rem;
   padding: 20px 10px;
   text-align: center;
@@ -143,6 +143,7 @@ button[type="submit"] {
 
 .footer .footer-content {
     text-align: center
+
 }
 
 .footer .footer-content.has-sidebar {
