@@ -61,7 +61,7 @@ def insert_station():
                            "radio_genre": "radio_genre"
                        }
                    })
-    flash("Your station successfully added", "info")
+    flash("Your station added successfully", "info")
     return redirect(url_for('get_station'))
 
 @app.route('/edit_station/<station_id>')
@@ -83,14 +83,14 @@ def update_station(station_id):
         'radio_description': request.form.get('radio_description'),
         'radio_stream': request.form.get('radio_stream')
     })
-    flash("Your station successfully edited", "info")
+    flash("Your station edited successfully", "info")
     return redirect(url_for('get_station'))
 
 
 @app.route('/delete_station/<station_id>')
 def delete_station(station_id):
     mongo.db.station.remove({'_id': ObjectId(station_id)})
-    flash("Your station successfully deleted", "info")
+    flash("Your station deleted successfully", "info")
     return redirect(url_for('get_station'))
 
 

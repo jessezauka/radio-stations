@@ -43,7 +43,10 @@ h3 {
   -o-background-size: cover;
   background-size: cover;
   max-width: 100%;
-  padding: 100px 100px;
+  padding-top: 30px;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-bottom: 170px;
   display: flex;
   color: #f5f5f5;
   text-align: center;
@@ -70,6 +73,7 @@ button[type="submit"] {
   background: #e67e22;
   padding: 5px 5px;
   border-radius: 20px;
+  border-radius: 20px;
   transition: all 0.35s ease-in-out;
   -moz-transition: all 0.35s ease-in-out;
   -webkit-transition: all 0.35s ease-in-out;
@@ -77,9 +81,11 @@ button[type="submit"] {
 }
 
 .heading-1 {
-   font-size: 3rem;
+    padding: 10px 10px;
+    font-size: 3rem;
+    border-style: solid;
     color: #e67e22;
-    border-style: solid
+    font-family: 'Metal Mania', cursive;
 }
 
 .flash {
@@ -195,34 +201,6 @@ a .fa-download:hover {
   -moz-transition: all 0.35s ease-in-out;
   -webkit-transition: all 0.35s ease-in-out;
   -o-transition: all 0.35s ease-in-out;
-}
-
-.social-links {
-  padding-bottom: 15px;
-  padding-top: 15px;
-}
-
-.social-links li {
-  display: inline;
-}
-
-.social-links li a i {
-  height: 35px;
-  width: 30px;
-  border-radius: 50%;
-  padding-top: 8px;
-  font-size: 20px;
-  color: #fffff0;
-  text-align: center;
-  background: #8f8f8f;
-  transition: all 0.35s ease-in-out;
-  -moz-transition: all 0.35s ease-in-out;
-  -webkit-transition: all 0.35s ease-in-out;
-  -o-transition: all 0.35s ease-in-out;
-}
-
-.social-links li a i:hover {
-  background: #e67e22;
 }
 
 .audio-container {
