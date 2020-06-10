@@ -1,83 +1,83 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700|Ubuntu:100,200,300,400,500,600,700");
 
 .form-group {
-  display: block;
-  width: 100%;
-  padding: 6px 12px;
-  font-size: 14px;
-  line-height: 1.42857143;
-  text-decoration-color: #5a2890;
-  background-color: #f5f5f5;
-  background-image: none;
+    display: block;
+    width: 100%;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    text-decoration-color: #5a2890;
+    background-color: #f5f5f5;
+    background-image: none;
 }
 
 body {
-  font-size: 20px;
-  color: #212529;
-  font-family: "Ubuntu", serif;
+    font-size: 20px;
+    color: #212529;
+    font-family: "Ubuntu", serif;
 }
 
 h1 {
-  font-size: 3rem;
-  padding: 20px 20px;
-  text-align: center;
+    font-size: 3rem;
+    padding: 20px 20px;
+    text-align: center;
 }
 
 .text-center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 h2,
 h3, h6 {
-  font-size: 2rem;
-  padding: 20px 10px;
-  text-align: center;
+    font-size: 2rem;
+    padding: 20px 10px;
+    text-align: center;
 }
 
 .header-img {
-  background-image: url("../images/crowd.jpg");
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  max-width: 100%;
-  padding-top: 30px;
-  padding-left: 100px;
-  padding-right: 100px;
-  padding-bottom: 170px;
-  display: flex;
-  color: #f5f5f5;
-  text-align: center;
-  z-index: -1;
-  align-items: center;
+    background-image: url("../images/crowd.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    max-width: 100%;
+    padding-top: 30px;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom: 170px;
+    display: flex;
+    color: #f5f5f5;
+    text-align: center;
+    z-index: -1;
+    align-items: center;
 }
 
 button[type="submit"] {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  background-color: #e84610;
-  color: #f5f5f5;
-  font-weight: 200;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #e84610;
+    color: #f5f5f5;
+    font-weight: 200;
 }
 
 .navbar {
-  padding: 10px 15px;
-  background-color: rgba(169, 169, 169, 0.39);
-  line-height: 30px;
-  max-width: 100%;
+    padding: 10px 15px;
+    background-color: rgba(169, 169, 169, 0.39);
+    line-height: 30px;
+    max-width: 100%;
 }
 
 .navbar a:hover {
-  background: #e67e22;
-  padding: 5px 5px;
-  border-radius: 20px;
-  border-radius: 20px;
-  transition: all 0.35s ease-in-out;
-  -moz-transition: all 0.35s ease-in-out;
-  -webkit-transition: all 0.35s ease-in-out;
-  -o-transition: all 0.35s ease-in-out;
+    background: #e67e22;
+    padding: 5px 5px;
+    border-radius: 20px;
+    border-radius: 20px;
+    transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    -webkit-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
 }
 
 .heading-1 {
@@ -94,8 +94,8 @@ button[type="submit"] {
 }
 
 .text {
-  padding: 10px 15px;
-  margin: 10px 10px;
+    padding: 10px 15px;
+    margin: 10px 10px;
 }
 
 .inner-content {
@@ -189,23 +189,23 @@ button[type="submit"] {
 }
 
 a .fa-download {
-  display: block;
-  text-align: center;
-  font-size: 25px;
-  padding-top: 15px;
-  color: #fffff0;
+    display: block;
+    text-align: center;
+    font-size: 25px;
+    padding-top: 15px;
+    color: #fffff0;
 }
 
 a .fa-download:hover {
-  color: #e67e22;
-  transition: all 0.35s ease-in-out;
-  -moz-transition: all 0.35s ease-in-out;
-  -webkit-transition: all 0.35s ease-in-out;
-  -o-transition: all 0.35s ease-in-out;
+    color: #e67e22;
+    transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    -webkit-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
 }
 
 .audio-container {
-  display: flex;
-  justify-content: center;
-  align-items: center
+    display: flex;
+    justify-content: center;
+    align-items: center
 }
