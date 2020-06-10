@@ -76,6 +76,17 @@ button[type="submit"] {
   -o-transition: all 0.35s ease-in-out;
 }
 
+.heading-1 {
+   font-size: 3rem;
+    color: #e67e22;
+    border-style: solid
+}
+
+.flash {
+    text-align: center;
+    font-size: 2rem;
+}
+
 .text {
   padding: 10px 15px;
   margin: 10px 10px;

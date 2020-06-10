@@ -1,7 +1,17 @@
 {% extends 'base.html' %} {% block content %}
 
+<!-- Flash message -->
+    {% with messages = get_flashed_messages () %}
+        {% if messages %}
+            {%  for msg in messages %}
+                <div class="flash">
+                    <p>{{ msg }}</p>
+                </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
 
-<!-- Why do you have col-md-6???? -->
+    <!-- Why do you have col-md-6???? -->
 <div class="container-fluid">  
 	<div class="row">
         <!-- This div is uncloses -->

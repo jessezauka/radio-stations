@@ -1,12 +1,17 @@
 import os
 if os.path.exists("env.py"):
     import env
-from flask import Flask, render_template, redirect, url_for, request
+from flask import Flask, render_template, redirect, url_for, request, flash
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 
 app = Flask(__name__)
 app.config["MONGO_URI"] = os.environ.get('MONGO_URI')
+
+app.config.update(
+    TESTING=True,
+    SECRET_KEY=b'_5#y2L"F4Q8z\n\xec]/'
+)
 
 mongo = PyMongo(app)
 
@@ -56,6 +61,7 @@ def insert_station():
                            "radio_genre": "radio_genre"
                        }
                    })
+    flash("Your station successfully added", "info")
     return redirect(url_for('get_station'))
 
 @app.route('/edit_station/<station_id>')
@@ -77,12 +83,14 @@ def update_station(station_id):
         'radio_description': request.form.get('radio_description'),
         'radio_stream': request.form.get('radio_stream')
     })
+    flash("Your station successfully edited", "info")
     return redirect(url_for('get_station'))
 
 
 @app.route('/delete_station/<station_id>')
 def delete_station(station_id):
     mongo.db.station.remove({'_id': ObjectId(station_id)})
+    flash("Your station successfully deleted", "info")
     return redirect(url_for('get_station'))
 
 

@@ -1,5 +1,15 @@
 {% extends 'base.html' %} {% block content %}
 
+<!-- Flash message -->
+{% with messages = get_flashed_messages () %}
+        {% if messages %}
+            {%  for msg in messages %}
+                <div class="flash">
+                    <p>{{ msg }}</p>
+                </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
 
 <h3> Edit Radio Station </h3>
 <!--Form to edit radio station-->
