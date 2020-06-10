@@ -75,7 +75,7 @@ This site is tested to be responsive on the following devices:
 1. Create Radio Information
         - Ensure radio station information is sent to database
 		
-2. Read Wine Information
+2. Read Radio Station Information
     - Ensure all the input information is being displayed correctly
  	
 3. Edit & Update Radio Station Information
