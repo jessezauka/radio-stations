@@ -1,9 +1,9 @@
 {% extends 'base.html' %} {% block content %}
 
-<!-- Flash message -->
+    <!-- Flash message -->
     {% with messages = get_flashed_messages () %}
         {% if messages %}
-            {%  for msg in messages %}
+            {% for msg in messages %}
                 <div class="flash">
                     <p>{{ msg }}</p>
                 </div>
@@ -12,39 +12,40 @@
     {% endwith %}
 
     <!-- Why do you have col-md-6???? -->
-<div class="container-fluid">  
-	<div class="row">
-        <!-- This div is uncloses -->
-		<div class="col-lg-8 col-md-12 col-sm-6 mx-auto">
-			<h2>
-			Explore Irish radio stations!
-			</h2>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- This div is uncloses -->
+            <div class="col-lg-8 col-md-12 col-sm-6 mx-auto">
+                <h2>
+                    Explore Irish radio stations!
+                </h2>
 
-			<hr>
-            <!--  row inside a div and then you have added extra overriding rules -->
-			<div class=" row ">
-            <!-- Anything with a 12 in it goes all the way across the page -->
+                <hr>
+                <!--  row inside a div and then you have added extra overriding rules -->
+                <div class=" row ">
+                    <!-- Anything with a 12 in it goes all the way across the page -->
 
-					{% for radio in genre %}
-                    <div class="col-md-6 text-center post-preview">
-					{% if radio.radio_genre == 'news' or radio.radio_genre == '80s' or radio.radio_genre == 'pop' or radio.radio_genre == 'classic-hits'%}
-                    <img src="{{ url_for('static', filename='../static/images/'+radio.radio_genre|replace(' + ', '-')|replace(' ', '-')|lower+'.png') }}" height="220" alt="Radio genre">
+                    {% for radio in genre %}
+                        <div class="col-md-6 text-center post-preview">
+                            {% if radio.radio_genre == 'news' or radio.radio_genre == '80s' or radio.radio_genre == 'pop' or radio.radio_genre == 'classic-hits' %}
+                                <img src="{{ url_for('static', filename='../static/images/'+radio.radio_genre|replace(' + ', '-')|replace(' ', '-')|lower+'.png') }}"
+                                     height="220" alt="Radio genre">
 
-					<a href="{{url_for('get_radio_details', radio_genre=radio.radio_genre|lower)}}">
-						<h3 class="post-title ">
-							{{radio.radio_genre.title()}}
-						</h3>
-					</a>
+                                <a href="{{ url_for('get_radio_details', radio_genre=radio.radio_genre|lower) }}">
+                                    <h3 class="post-title ">
+                                        {{ radio.radio_genre.title() }}
+                                    </h3>
+                                </a>
 
-					{% endif %}
-					<hr>
-                    </div>
-					{% endfor %}
-				
-            </div>
+                            {% endif %}
+                            <hr>
+                        </div>
+                    {% endfor %}
+
+                </div>
             </div>
         </div>
-	</div>
+    </div>
     <hr>
 
 {% endblock %}

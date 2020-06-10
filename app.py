@@ -1,4 +1,5 @@
 import os
+
 if os.path.exists("env.py"):
     import env
 from flask import Flask, render_template, redirect, url_for, request, flash
@@ -15,14 +16,17 @@ app.config.update(
 
 mongo = PyMongo(app)
 
+
 @app.route('/')
 @app.route('/stations')
 def get_station():
     return render_template("index.html", genre=list(mongo.db.genre.find()))
 
+
 @app.route('/contact-us')
 def contact_us():
-    return render_template("contact_us.html",)
+    return render_template("contact_us.html", )
+
 
 @app.route('/genre/<radio_genre>')
 def get_radio_details(radio_genre):
@@ -36,11 +40,13 @@ def get_radio_details(radio_genre):
     elif radio_genre == '80s':
         title = '80s'
     station = mongo.db.station.find({"radio_genre": radio_genre})
-    return render_template('station_details.html', station=mongo.db.station.find({"radio_genre": radio_genre}), title=title)
+    return render_template('station_details.html', station=mongo.db.station.find({"radio_genre": radio_genre}),
+                           title=title)
+
 
 @app.route('/stations/add_station')
 def add_station():
-    return render_template("add_station.html",  genre=mongo.db.genre.find())
+    return render_template("add_station.html", genre=mongo.db.genre.find())
 
 
 @app.route('/insert_station', methods=['POST'])
@@ -63,6 +69,7 @@ def insert_station():
                    })
     flash("Your station added successfully", "info")
     return redirect(url_for('get_station'))
+
 
 @app.route('/edit_station/<station_id>')
 def edit_station(station_id):
